@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Link from "next/link";
 
-import { Header } from "@/components/Header";
+import { Footer } from "@/components/partials/Footer";
+import { Header } from "@/components/partials/Header";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,20 +39,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-1 flex-col bg-zinc-800">
           <Header />
-          <Link href="/signin">login</Link>
           {children}
-          <footer className="mono flex justify-between bg-red-600 px-4 py-5 font-medium text-white">
-            <div>ZPizza @2023 - Todos os direitos reservados </div>
-            <div>
-              Desenvolvido por{" "}
-              <Link
-                className="font-semibold"
-                href="http://ludrianowashington.vercel.io"
-              >
-                Ludriano Washington
-              </Link>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
