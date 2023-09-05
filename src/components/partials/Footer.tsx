@@ -7,13 +7,13 @@ export function Footer() {
         ZPizza @2023 - Todos os direitos reservados{" "}
       </div>
       <div className="text-xs">
-        Desenvolvido por{" "}
+        {/* Desenvolvido por{" "}
         <Link
           className="font-semibold"
           href="http://ludrianowashington.vercel.io"
         >
           Ludriano Washington
-        </Link>
+        </Link> */}
       </div>
     </footer>
   );
