@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { ButtonCTA, ButtonLink } from "@/components/ui/ButtonLink";
+import { ButtonCall, ButtonLink } from "@/components/ui/ButtonLink";
 import { useWindowDimensions } from "@/hooks/useWindowDimension";
 import { LogIn, Menu, ShoppingCartIcon } from "lucide-react";
 
@@ -40,9 +40,9 @@ export function Header() {
           <ButtonLink text="Promoções" navigateTo="/" />
         </nav>
         <div className="hidden h-full w-full items-center justify-center md:flex md:max-w-[15vw] ">
-          <ButtonCTA text="Entrar ou Cadastrar-se" navigateTo="/signin">
+          <ButtonCall text="Entrar ou Cadastrar-se" navigateTo="/signin">
             <LogIn className="w10 h-10" />
-          </ButtonCTA>
+          </ButtonCall>
         </div>
       </div>
       <div className="hidden h-full w-full items-center text-white md:flex md:max-w-[10vw]">

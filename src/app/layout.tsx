@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <div className="flex flex-1 flex-col bg-zinc-800">
+        <div className="flex flex-1 scroll-m-0 flex-col bg-zinc-800 bg-scroll">
           <Header />
           {children}
           <Footer />
