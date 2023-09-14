@@ -16,7 +16,7 @@ interface IButtonCTA extends IButtonLink {
 export function ButtonLink({ children, navigateTo, text }: IButtonLink) {
   return (
     <Link
-      className="flex h-full max-w-xs flex-wrap items-center px-5 duration-500 ease-in-out hover:bg-red-600"
+      className="flex h-full max-w-xs flex-wrap items-center justify-center px-5 duration-500 ease-in-out hover:bg-red-600"
       href={navigateTo}
     >
       {children && children}

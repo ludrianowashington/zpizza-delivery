@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+//Fontes a utilizar: Noto_Serif, Poppins
 import { Inter } from "next/font/google";
 
 import { Footer } from "@/components/partials/Footer";
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     description:
       "Massas Frescas, De Fabricação Própria, Produzidas com Ingredientes da Melhor Qualidade. Pizzaria em Recife com pizzas e massas artesanais.",
     title: "ZPizza Delivery",
+    images: "/apple-touch-icon.png",
   },
 };
 
@@ -37,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={inter.className}>
-        <div className="flex flex-1 scroll-m-0 flex-col bg-zinc-800 bg-scroll">
+        <div className="flex w-full flex-col bg-scroll">
           <Header />
           {children}
           <Footer />
