@@ -19,21 +19,27 @@ interface ICardProduct {
 
 export function CardProduct({ data }: ICardProduct) {
   return (
-    <div className="flex h-[30rem] w-full flex-col rounded-lg bg-muted p-3 lg:h-40 lg:flex-row">
-      <div className="basis-1/2  md:basis-1/4 ">
-        <Image
-          className="h-[14rem] rounded-t-md object-cover lg:h-full lg:rounded-l-md"
-          src={img}
-          alt="foto pizza"
-        />
+    <div className="flex h-[27rem] w-full flex-col rounded-lg bg-muted p-2 lg:h-40 lg:flex-row">
+      <div className="basis-1/2  md:basis-1/3 ">
+        {data ? (
+          <Image
+            className="h-[14rem] rounded-t-md object-cover lg:h-full lg:rounded-l-md"
+            src={img}
+            alt="foto pizza"
+          />
+        ) : (
+          <div className="h-[14rem] rounded-t-md bg-slate-600 lg:h-full lg:rounded-l-md"></div>
+        )}
       </div>
-      <div className=" h-full basis-1/2 lg:basis-3/4">
-        <div className="h-[70%] p-2 lg:h-[70%] lg:p-0">
-          <h4 className="pb-1 text-lg font-semibold">{data.flavor}</h4>
-          <p className="h-[50%] lg:h-[30%] lg:text-ellipsis lg:text-xs">
+      <div className=" h-full basis-1/2 lg:basis-2/3">
+        <div className="h-[69%] p-2 lg:h-[68%] lg:py-0">
+          <h4 className="pb-2 text-2xl font-semibold lg:truncate lg:pb-0 lg:text-lg">
+            {data.flavor}
+          </h4>
+          <p className="line-clamp-2 h-auto w-full max-w-[90%] overflow-hidden truncate whitespace-pre-line md:line-clamp-1 lg:line-clamp-2 lg:text-xs">
             {data.ingredients}
           </p>
-          <p className="flex h-[25%] w-full items-center justify-end px-3 text-2xl font-bold text-red-500 lg:h-[30%]">
+          <p className="flex h-[3rem] w-full items-center justify-end px-3 text-2xl font-bold text-red-500 md:text-lg">
             R$ {data.price}
           </p>
         </div>
